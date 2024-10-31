@@ -226,7 +226,10 @@ nav img {
   border-radius: 20px;
   background: linear-gradient(to right, rgb(238, 255, 0), rgb(255, 166, 0));
 }
-
+.links{
+  text-decoration: none;
+  color: black;
+}
 .name,
 .name-1 {
   margin-left: 3%;

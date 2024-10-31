@@ -1,39 +1,3 @@
-<?php
-$insert = false; // Initialize $insert
-if (isset($_POST['name'])) {
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $con = mysqli_connect($server, $username, $password);
-    if (!$con) {
-        die("Connection failed due to" . mysqli_connect_error());
-    }
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    
-    // Check if email already exists
-    $check_sql = "SELECT * FROM `portfolio`.`form` WHERE email='$email'";
-    $result = $con->query($check_sql);
-    
-    if ($result->num_rows > 0) {
-        echo "This email is already responded!";
-    } else {
-        // Proceed with insertion if no duplicate is found
-        $sql = "INSERT INTO `portfolio`.`form` (`name`, `email`, `message`, `date`) VALUES ('$name', '$email', '$message', current_timestamp());";
-        
-        if ($con->query($sql) == true) {
-            $insert = true;
-        } else {
-            echo "Error: $sql <br> $con->error";
-        }
-    }
-
-    $con->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
