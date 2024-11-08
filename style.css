@@ -539,30 +539,20 @@ footer h5 {
     cursor: pointer;
     transition: 0.1s ease-in-out;
   }
-  /* #hamburger:hover {
-    #nav-ul {
-      display: block;
-    }
-  } */
-
-  /* .hamburger-menu img{
-    transition: 0.3 ease-in-out;
-  } */
   #submenu{
     display: flex;
     flex-direction: column;
   }
   #submenu{
-    visibility: visible;
     font-size: smaller;
     font-weight: 400;
     top: 50%;
     left: 50%;
     width: 120px;
     border-radius: 15px;
-    display: none;
-    opacity: 0;
     transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
     z-index: 1;
   }
   #submenu li{
@@ -571,7 +561,6 @@ footer h5 {
     padding: 15px 15px;
     background-color: yellow;
     cursor: pointer;
-    float: none;
   }
   #submenu li:hover{
     background-color: rgb(255, 196, 0);
@@ -593,7 +582,7 @@ footer h5 {
     transition: 0.3s ease-in-out;
   }
   .span:hover + #submenu{
-    display: block;
+    /* visibility: visible; */
     opacity: 100;
   }
   .me img {

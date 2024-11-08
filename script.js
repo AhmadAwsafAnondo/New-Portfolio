@@ -1,8 +1,11 @@
-// Selecting the hamburger icon and navigation menu
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-ul');
+const hamburger = document.getElementById("span");
+const submenu = document.getElementById("submenu");
 
-// Adding click event to toggle the 'show' class for sliding effect
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-});
+hamburger.addEventListener("click", ()=>{
+    submenu.style.visibility = "visible";
+    submenu.style.opacity = "100";
+})
+function hideBtn(){
+    submenu.style.visibility = "hidden";
+    submenu.style.opacity = "0";
+}
