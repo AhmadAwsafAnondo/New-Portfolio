@@ -23,8 +23,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: smaller;
   letter-spacing: 2px;
@@ -42,6 +43,47 @@ header {
 #contact {
   scroll-margin-top: 100px;
 }
+/* .off-screen-menu{
+  background-color: #1d242d;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: 0.3s ease-in-out;
+}
+.off-screen-menu.active{
+  right: 0;
+}
+.ham-menu{
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+.ham-menu span{
+  height: 6px;
+  width: 40px;
+  background-color: #1d242d;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out;
+}
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+.ham-menu span:nth-child(3){
+  top: 75%;
+} */
 .upper-nav {
   position: relative;
   top: 0%;
@@ -71,8 +113,7 @@ header {
   width: 45%;
   display: flex;
   justify-content: space-between;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: smaller;
   letter-spacing: 2px;
@@ -110,7 +151,7 @@ nav img {
   color: rgb(34, 34, 34);
   margin-left: 15%;
   margin-top: 10%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .content-1 a {
   text-decoration: none;
@@ -155,7 +196,7 @@ nav img {
   /* margin-left: 15%; */
   margin-top: 7%;
   padding-bottom: 2%;
-  font-family: Azonix;
+  font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   border-bottom: 3px solid rgb(255, 255, 255);
   width: 70%;
@@ -202,7 +243,7 @@ nav img {
   display: flex;
   margin-top: 5%;
   margin-left: 46%;
-  font-family: Azonix;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -226,7 +267,17 @@ nav img {
   border-radius: 20px;
   background: linear-gradient(to right, rgb(238, 255, 0), rgb(255, 166, 0));
 }
-.links{
+.social-media-contact a img {
+  width: 50px;
+}
+.social-media-contact {
+  /* border: 1px solid; */
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.links {
   text-decoration: none;
   color: black;
 }
@@ -262,7 +313,7 @@ nav img {
 }
 .skill-description h1 {
   text-align: center;
-  font-family: Azonix;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .skill-items {
   display: flex;
@@ -284,7 +335,7 @@ nav img {
 .skill-items-1 p,
 h4 {
   padding: 10%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 .skill-items-2 {
@@ -302,7 +353,7 @@ h4 {
 .skill-items-2 p,
 h4 {
   padding: 10%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 .skill-items-3 {
@@ -321,7 +372,7 @@ h4 {
 .skill-items-3 p,
 h4 {
   padding: 10%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 .skill-items-4 {
@@ -340,7 +391,7 @@ h4 {
 .skill-items-4 p,
 h4 {
   padding: 10%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 .contact {
@@ -354,7 +405,7 @@ h4 {
 }
 .contact h1 {
   text-align: center;
-  font-family: Azonix;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 .contact-items {
@@ -422,7 +473,7 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-.submitMSG{
+.submitMSG {
   text-align: center;
   color: green;
 }
@@ -434,6 +485,7 @@ h4 {
 footer {
   background: linear-gradient(to right, rgb(238, 255, 0), rgb(255, 166, 0));
   border-radius: 15px;
+  height: 24vh;
 }
 footer h5 {
   text-align: center;
@@ -462,11 +514,14 @@ footer h5 {
 }
 @media (max-width: 576px) {
   header {
-    height: 100px;
+    height: 80px;
   }
   .nav-content ul a li {
     font-size: smaller;
     font-weight: 700;
+  }
+  .social-media-contact a img {
+    width: 30px;
   }
   .nav-content ul {
     width: 75%;
@@ -475,19 +530,51 @@ footer h5 {
   .nav-content {
     width: 100%;
   }
-  #nav-ul.show {
-    display: block;
+  .nav-ul li {
+    font-size: 0.4rem;
+    /* border: 1px solid; */
+    height: 20px;
+    padding: 5px 5px;
+    padding-top: 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    color: white;
+    background-color: #1d242d;
+    transition: 0.3s ease-in-out;
   }
-  /* #hamburger {
+  /* .nav-ul li:hover {
+    background-color: white;
+    color: black;
+  } */
+  .nav-content ul li a {
+    transition: 0.3s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: larger;
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    background-color: #1d242d;
+    color: rgb(255, 255, 255);
+    padding: 5px 5px;
+  }
+  
+  /* #nav-ul.show {
+    display: block;
+  } */
+
+  #hamburger {
     display: flex;
     cursor: pointer;
     transition: 0.1s ease-in-out;
   }
   #hamburger:hover {
-    #nav-ul{
+    #nav-ul {
       display: block;
     }
-  } */
+  }
   .me img {
     left: 20%;
     width: 60%;
@@ -551,7 +638,10 @@ footer h5 {
     width: 20px;
   }
   .footer h5 {
-    font-size: medium;
+    font-size: smaller;
+  }
+  footer {
+    height: 65px;
   }
   .contact {
     border: 1px solid white;

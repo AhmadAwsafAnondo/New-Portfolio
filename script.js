@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburgerIcon = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-ul");
+// Selecting the hamburger icon and navigation menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-ul');
 
-  hamburgerIcon.addEventListener("click", function() {
-    navMenu.classList.toggle("show");
-  });
+// Adding click event to toggle the 'show' class for sliding effect
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
 });

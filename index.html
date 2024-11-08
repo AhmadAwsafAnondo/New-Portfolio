@@ -13,18 +13,37 @@
     <div class="upper-nav"></div>
     <div class="nav-content">
       <nav id="navMenu">
-        <img src="Hamburger.png" alt="" id="hamburger" style="margin-top: 30px; margin-left: 80vw; width: 30px;">
+        <!-- <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> -->
+        <div class="off-screen-menu">
+          <div id="nav-ul">
+            <ul class="nav-ul">
+              <li><a href="#landing-page">HOME</a></li>
+              <li><a href="#about-me">ABOUT ME</a></li>
+              <li><a href="#skills">SKILLS</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#contact">CONTACT ME</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="hamburger-menu">
+          <img src="Hamburger.png" alt="" id="hamburger" style="margin-top: 30px; margin-left: 80vw; width: 30px;">
+        </div> -->
         <a href="index.html">
           <img src="Logo black.png" alt="">
         </a>
-        <div id="nav-ul">
+        <!-- <div id="nav-ul">
           <ul class="nav-ul">
             <li><a href="#landing-page">HOME</a></li>
             <li><a href="#about-me">ABOUT ME</a></li>
             <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT ME</a></li>
           </ul>
-        </div>
+        </div> -->
       </nav>
     </div>
   </header>
@@ -120,26 +139,43 @@
       </div>
     </section>
     <section class="contact" id="contact">
-    <form action="index.php" method="post">
-    <h1>Contact Me</h1>
+    <!-- <form action="index.php" method="post"> -->
+    <h1>Contact Me Through</h1>
+    <div class="social-media-contact">
+      <a href="https://www.facebook.com/ahmad.awsaf.anondo">
+        <img src="facebook.svg" alt="">
+      </a>
+      <a href="https://www.instagram.com/ahmad_awsaf_anondo/">
+        <img src="instagram.svg" alt="">
+      </a>
+      <a href="https://www.linkedin.com/in/ahmad-awsaf-anondo-421686215/">
+        <img src="linkedin.svg" alt="">
+      </a>
+      <a href="https://x.com/AnondoAhmad">
+        <img src="twitter.svg" alt="">
+      </a>
+      <!-- <a href="https://www.youtube.com/@a-3892">
+        <img src="youtube.svg" alt="">
+      </a> -->
+    </div>
     <!-- <?php
     if ($insert == true) {
         echo '<p class="submitMSG">Thanks for your response!</p>';
     }
     ?> -->
-    <div class="contact-items">
+    <!-- <div class="contact-items">
         <input type="text" name="name" placeholder="Enter Your Name" id="form-name">
         <input type="email" name="email" placeholder="Enter Your Email" id="form-email">
         <textarea name="message" id="textarea" placeholder="Enter your Message"></textarea>
         <input type="submit" value="Submit" id="submit">
     </div>
-</form>
+</form> -->
 
     </section>
   </main>
   <footer class="footer">
     <h5>&copy; 2024 All Rights Reserved to Ahmad Awsaf Anondo</h5>
-    <div class="social-media">
+    <!-- <div class="social-media">
       <a href="https://www.facebook.com/ahmad.awsaf.anondo">
         <img src="Blacks/facebook.svg" alt="">
       </a>
@@ -155,7 +191,7 @@
       <a href="https://www.instagram.com/ahmad_awsaf_anondo/">
         <img src="Blacks/instagram.svg" alt="">
       </a>
-    </div>
+    </div> -->
   </footer>
   <script src="script.js"></script>
 </body>
