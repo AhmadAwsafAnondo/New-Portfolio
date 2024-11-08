@@ -130,7 +130,7 @@ header {
   font-weight: 900;
   font-size: larger;
 }
-.nav-content ul li a:hover {
+.nav-ul li a:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   padding: 10px 10px;
@@ -512,6 +512,9 @@ footer h5 {
   text-decoration: none;
   margin-right: 4%;
 }
+#submenu{
+  visibility: hidden;
+}
 @media (max-width: 576px) {
   header {
     height: 80px;
@@ -527,53 +530,71 @@ footer h5 {
     width: 75%;
     left: 12%;
   }
-  .nav-content {
-    width: 100%;
+  #nav-ul {
+    /* width: 100%;*/
+    display: none;
   }
-  .nav-ul li {
-    font-size: 0.4rem;
-    /* border: 1px solid; */
-    height: 20px;
-    padding: 5px 5px;
-    padding-top: 10px;
-    margin-right: 5px;
-    border-radius: 4px;
-    color: white;
-    background-color: #1d242d;
-    transition: 0.3s ease-in-out;
-  }
-  /* .nav-ul li:hover {
-    background-color: white;
-    color: black;
-  } */
-  .nav-content ul li a {
-    transition: 0.3s ease-in-out;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: 900;
-    font-size: larger;
-    color: white;
-  }
-  .nav-content ul li a:hover {
-    background-color: #1d242d;
-    color: rgb(255, 255, 255);
-    padding: 5px 5px;
-  }
-  
-  /* #nav-ul.show {
-    display: block;
-  } */
-
   #hamburger {
     display: flex;
     cursor: pointer;
     transition: 0.1s ease-in-out;
   }
-  #hamburger:hover {
+  /* #hamburger:hover {
     #nav-ul {
       display: block;
     }
+  } */
+
+  /* .hamburger-menu img{
+    transition: 0.3 ease-in-out;
+  } */
+  #submenu{
+    display: flex;
+    flex-direction: column;
+  }
+  #submenu{
+    visibility: visible;
+    font-size: smaller;
+    font-weight: 400;
+    top: 50%;
+    left: 54%;
+    width: 120px;
+    border-radius: 15px;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+  }
+  #submenu li{
+    border: 1px solid rgb(255, 208, 0);
+    width: 120px;
+    padding: 15px 15px;
+    background-color: yellow;
+    cursor: pointer;
+    float: none;
+  }
+  #submenu li:hover{
+    background-color: rgb(255, 196, 0);
+  }
+  .span span{
+    background-color: #1f1f1f;
+    width: 30px;
+    height: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    border-radius: 50px;
+  }
+  .span{
+    margin-top: 20px;
+    margin-right: 25px;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s ease-in-out;
+  }
+  .span:hover + #submenu{
+    display: block;
+    opacity: 100;
   }
   .me img {
     left: 20%;
